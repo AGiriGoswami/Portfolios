@@ -65,7 +65,7 @@ export default function App() {
             className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 px-8 py-4 rounded-xl 
                        text-white  font-semibold shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 animate-fadeUp hover:shadow-indigo-500/20"
           >
-            Download CV
+            Open CV
           </a>
           <span className="m-3"></span>
         
@@ -143,7 +143,7 @@ export default function App() {
       </section>
 
       {/* Projects Section */}
-      <section
+      {/* <section
         id="projects"
         className="py-20 px-6 md:px-20 bg-gray-800/50 backdrop-blur-sm"
       >
@@ -176,7 +176,7 @@ export default function App() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 md:px-20">
