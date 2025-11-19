@@ -7,20 +7,31 @@ export default function App() {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white min-h-screen font-sans overflow-hidden">
       {/* Navbar */}
-      <nav className="flex justify-between items-center px-8 py-4 bg-gray-800/80 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-700">
-        <h1 className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent animate-fadeIn hover:animate-jump">
-          Ajay Giri Goswami
-        </h1>
-        <ul className="hidden md:flex space-x-8 ">
-          {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
-            <li
-              key={item}
-              className="hover:text-indigo-400 cursor-pointer transition-all duration-300 hover:scale-110"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
+      <nav
+        className="fixed top-0 left-0 w-full z-50 bg-gray-800/70 backdrop-blur-md 
+             border-b border-gray-700 shadow-md transition-all duration-300"
+      >
+        <div className="flex justify-between items-center px-8 py-4">
+          <h1 className="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent animate-fadeIn hover:animate-jump">
+            Ajay Giri Goswami
+          </h1>
+
+          <ul className="hidden md:flex space-x-8">
+            {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+              <li
+                key={item}
+                className="transition-all duration-300 hover:scale-110"
+              >
+                <a
+                  href={item === "Home" ? "/" : `#${item.toLowerCase()}`}
+                  className="hover:text-indigo-400 cursor-pointer block"
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>
 
       {/* Hero Section */}
@@ -32,7 +43,7 @@ export default function App() {
           <h1
             className="text-4xl md:text-6xl font-extrabold mb-4 
                        bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent 
-                       animate-jump p-2"
+                       animate-pulse p-2 hover:animate-bounce"
           >
             Ajay Giri Goswami
           </h1>
@@ -43,11 +54,17 @@ export default function App() {
           </p>
           <p className="text-gray-400 text-sm mb-6 animate-fadeIn">
             📞 +91-86020-35235 | ✉️ ag124767@gmail.com |
-            <a href="https://www.linkedin.com/in/ajay-giri-goswami-564482227/" className="text-indigo-400 hover:underline ml-1">
+            <a
+              href="https://www.linkedin.com/in/ajay-giri-goswami-564482227/"
+              className="text-indigo-400 hover:underline ml-1"
+            >
               LinkedIn
             </a>{" "}
             |
-            <a href="https://github.com/AGiriGoswami" className="text-purple-400 hover:underline ml-1">
+            <a
+              href="https://github.com/AGiriGoswami"
+              className="text-purple-400 hover:underline ml-1"
+            >
               GitHub
             </a>
           </p>
@@ -68,9 +85,6 @@ export default function App() {
             Open CV
           </a>
           <span className="m-3"></span>
-        
-
-          
         </div>
       </section>
 
@@ -81,7 +95,7 @@ export default function App() {
       >
         <h2
           className="text-3xl font-bold animate-jump text-center bg-gradient-to-r from-indigo-400 to-purple-500 
-               bg-clip-text text-transparent mb-10 animate-slideDown hover:animate-jump"
+               bg-clip-text text-transparent mb-10 animate-slideDown hover:animate-ping"
         >
           About Me
         </h2>
@@ -116,7 +130,7 @@ export default function App() {
       <section id="skills" className="py-20 px-6 md:px-20">
         <h2
           className="text-3xl font-bold animate-jump text-center bg-gradient-to-r from-indigo-400 to-purple-500 
-                     bg-clip-text text-transparent mb-10 animate-slideDown"
+                     bg-clip-text text-transparent mb-10 animate-slideDown hover:animate-ping"
         >
           Skills
         </h2>
@@ -142,6 +156,41 @@ export default function App() {
         </div>
       </section>
 
+      {/* Education */}
+      <section id="education" className="py-20 px-6 md:px-20">
+        <h2
+          className="text-3xl font-bold animate-jump text-center bg-gradient-to-r from-indigo-400 to-purple-500 
+                 bg-clip-text text-transparent mb-10 animate-slideDown hover:animate-ping"
+        >
+          Education
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {[
+            {
+              degree: "Bachelor of Computer Applications (BCA)",
+              institute: "Vishisht School of Management (2021 - 2024)", 
+              cgpa: "CGPA: 6.62/10"
+            },
+            {
+              degree: "Higher Secondary (12th)",
+              institute: "Sage University, Indore — Pursuing",
+              cgpa: "",
+            },
+          ].map((edu) => (
+            <div
+              key={edu.degree}
+              className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-md border border-gray-700
+                     text-white hover:scale-105 transition-transform duration-300 animate-fadeUp hover:shadow-indigo-500/20"
+            >
+              <h3 className="text-xl font-semibold">{edu.degree}</h3>
+              <p className="text-gray-300">{edu.institute}</p>  
+              <p className="text-indigo-400">{edu.cgpa}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Projects Section */}
       {/* <section
         id="projects"
@@ -149,7 +198,7 @@ export default function App() {
       >
         <h2
           className="text-3xl animate-jump font-bold text-center bg-gradient-to-r from-indigo-400 to-purple-500 
-                     bg-clip-text text-transparent mb-10 animate-slideDown"
+                     bg-clip-text text-transparent mb-10 animate-slideDown hover:animate-ping"
         >
           Projects
         </h2>
@@ -182,7 +231,7 @@ export default function App() {
       <section id="contact" className="py-20 px-6 md:px-20">
         <h2
           className="text-3xl animate-jump font-bold text-center bg-gradient-to-r from-indigo-400 to-purple-500 
-                     bg-clip-text text-transparent mb-10 animate-slideDown"
+                     bg-clip-text text-transparent mb-10 animate-slideDown hover:animate-ping"
         >
           Contact Me
         </h2>
