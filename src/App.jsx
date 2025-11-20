@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import ajaygirigoswami from "./assets/ajay.jpeg";
-import ajaycv from "./assets/ajaycv.pdf";
+import ajaycv from "./assets/Ajay Giri Goswami.pdf"
 
 export default function App() {
   return (
@@ -178,7 +178,7 @@ export default function App() {
               cgpa: "",
             },
           ].map((edu) => (
-            <div
+            <div 
               key={edu.degree}
               className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-md border border-gray-700
                      text-white hover:scale-105 transition-transform duration-300 animate-fadeUp hover:shadow-indigo-500/20"
