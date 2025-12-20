@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
-import ajaygirigoswami from "./assets/ajay.jpeg";
-import ajaycv from "./assets/Ajay Giri Goswami.pdf"
+import ajaygirigoswami from "./assets/Ajay_.jpg";
+import ajaycv from "./assets/Ajay Giri Goswami.pdf";
 
 export default function App() {
   return (
@@ -17,7 +17,14 @@ export default function App() {
           </h1>
 
           <ul className="hidden md:flex space-x-8">
-            {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+            {[
+              "Home",
+              "About",
+              "Skills",
+              "Education",
+              "Projects",
+              "Contact",
+            ].map((item) => (
               <li
                 key={item}
                 className="transition-all duration-300 hover:scale-110"
@@ -169,8 +176,8 @@ export default function App() {
           {[
             {
               degree: "Bachelor of Computer Applications (BCA)",
-              institute: "Vishisht School of Management (2021 - 2024)", 
-              cgpa: "CGPA: 6.62/10"
+              institute: "Vishisht School of Management (2021 - 2024)",
+              cgpa: "CGPA: 6.62/10",
             },
             {
               degree: "Higher Secondary (12th)",
@@ -178,13 +185,13 @@ export default function App() {
               cgpa: "",
             },
           ].map((edu) => (
-            <div 
+            <div
               key={edu.degree}
               className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-md border border-gray-700
                      text-white hover:scale-105 transition-transform duration-300 animate-fadeUp hover:shadow-indigo-500/20"
             >
               <h3 className="text-xl font-semibold">{edu.degree}</h3>
-              <p className="text-gray-300">{edu.institute}</p>  
+              <p className="text-gray-300">{edu.institute}</p>
               <p className="text-indigo-400">{edu.cgpa}</p>
             </div>
           ))}
