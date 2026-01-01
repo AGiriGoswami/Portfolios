@@ -1,4 +1,5 @@
 import React from "react";
+import userAuthQR from "../assets/userAuthQR.jpeg";
 
 const Projects = () => {
   return (
@@ -38,27 +39,55 @@ const Projects = () => {
 
             <p className="text-gray-400 mb-6 leading-relaxed">
               A secure and scalable authentication system built using
-              <span className="text-indigo-400 font-semibold">
-                {" "}
-                MERN Stack
-              </span>
-              . Includes user registration, login, protected routes, JWT
-              authentication, and profile management.
+              <span className="text-indigo-400 font-semibold"> MERN Stack</span>.
+              Includes JWT authentication, protected routes, and profile
+              management.
             </p>
 
-            <a
-              href="https://wondrous-manatee-ad7dae.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2
-                         bg-gradient-to-r from-indigo-500 to-purple-600
-                         px-8 py-3 rounded-xl text-white font-semibold
-                         shadow-lg hover:shadow-2xl
-                         transition-all duration-300
-                         hover:scale-110 animate-pulse"
-            >
-              🚀 View Live Project
-            </a>
+              {/* QR Code */}
+            <div className="mt-4 flex flex-col items-center mb-6">
+              <img
+                src={userAuthQR}
+                alt="User Auth App QR Code"
+                className="w-47 h-40 rounded-xl border border-gray-600
+                           hover:scale-110 transition-transform duration-300"
+              />
+              {/* <p className="text-sm text-gray-400 mt-2">
+                Scan QR to open project
+              </p> */}
+            </div>
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+              <a
+                href="https://wondrous-manatee-ad7dae.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2
+                           bg-gradient-to-r from-indigo-500 to-purple-600
+                           px-6 py-3 rounded-xl text-white font-semibold
+                           shadow-lg hover:shadow-2xl
+                           transition-all duration-300
+                           hover:scale-110"
+              >
+                🚀 View Live Project
+              </a>
+
+              <a
+                href="https://wondrous-manatee-ad7dae.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2
+                           border border-indigo-500 text-indigo-400
+                           px-6 py-3 rounded-xl font-semibold
+                           hover:bg-indigo-500 hover:text-white
+                           transition-all duration-300 hover:scale-110"
+              >
+                📱 Open via QR
+              </a>
+            </div>
+
+          
           </div>
         </div>
       </div>
