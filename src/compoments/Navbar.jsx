@@ -2,7 +2,6 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-gray-800/70 backdrop-blur-md border-b border-gray-700">
       <div className="flex justify-between items-center px-8 py-4">
-
         {/* LOGO / HOME → HERO SECTION */}
         <a
           href="#home"
@@ -21,6 +20,7 @@ const Navbar = () => {
             { name: "Skills", id: "skills" },
             { name: "Education", id: "education" },
             { name: "Projects", id: "projects" },
+            { name: "Work Experience", id: "experience" },
             { name: "Contact", id: "contact" },
           ].map((item) => (
             <li key={item.id}>
@@ -33,7 +33,6 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
       </div>
     </nav>
   );

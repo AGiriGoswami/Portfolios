@@ -7,7 +7,6 @@ const Footer = () => {
                  px-6 md:px-20 py-10 mt-20 animate-fadeIn"
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
-
         {/* Brand */}
         <div className="space-y-3">
           <h3
@@ -19,29 +18,32 @@ const Footer = () => {
             Ajay Giri Goswami
           </h3>
           <p className="text-gray-400 text-sm leading-relaxed">
-            MERN Stack Developer focused on building modern, scalable,
-            and user-friendly web applications with clean UI
-            and secure backend architecture.
+            MERN Stack Developer focused on building modern, scalable, and
+            user-friendly web applications with clean UI and secure backend
+            architecture.
           </p>
         </div>
 
         {/* Quick Links */}
         <div className="space-y-3">
-          <h4 className="text-lg font-semibold text-indigo-400">
-            Quick Links
-          </h4>
+          <h4 className="text-lg font-semibold text-indigo-400">Quick Links</h4>
           <ul className="space-y-2 text-gray-400">
-            {["About", "Skills", "Education", "Projects", "Contact"].map(
-              (link) => (
-                <li
-                  key={link}
-                  className="hover:text-indigo-400 hover:translate-x-1
+            {[
+              "About",
+              "Skills",
+              "Education",
+              "Projects",
+              "Experience",
+              "Contact",
+            ].map((link) => (
+              <li
+                key={link}
+                className="hover:text-indigo-400 hover:translate-x-1
                              transition-all duration-300 cursor-pointer"
-                >
-                  <a href={`#${link.toLowerCase()}`}>{link}</a>
-                </li>
-              )
-            )}
+              >
+                <a href={`#${link.toLowerCase()}`}>{link}</a>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -82,9 +84,9 @@ const Footer = () => {
         className="mt-10 pt-6 border-t border-gray-700 text-center
                    text-gray-500 text-sm animate-fadeUp"
       >
-        © 2026 <span className="text-indigo-400 font-semibold">
-          Ajay Giri Goswami
-        </span>. All Rights Reserved.
+        © 2026{" "}
+        <span className="text-indigo-400 font-semibold">Ajay Giri Goswami</span>
+        . All Rights Reserved.
       </div>
     </footer>
   );
