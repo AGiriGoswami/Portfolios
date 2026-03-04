@@ -31,6 +31,7 @@ const Work = () => {
               </span>
             </div>
 
+            {/* Work title */}
             <h4 className="text-lg font-semibold text-gray-200 mb-4">
               E-Commerce Account Manager
             </h4>
