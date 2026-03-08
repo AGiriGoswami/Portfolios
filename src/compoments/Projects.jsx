@@ -83,7 +83,7 @@ const Projects = () => {
                            shadow-lg hover:shadow-2xl
                            transition-all duration-300 hover:scale-110"
               >
-                📊 View Live Demo
+                📊 View Live Project
               </a>
             </div>
           </div>
