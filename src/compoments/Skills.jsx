@@ -4,12 +4,14 @@ const skills = [
   "HTML",
   "CSS",
   "JavaScript",
-  "React",
   "Tailwind CSS",
+  "React",
+  "Redux-Toolkit",
   "Node.js",
   "MongoDB",
   "GitHub",
   "MySql",
+  "Excel"
 ];
 
 const Skills = () => {
