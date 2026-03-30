@@ -9,6 +9,7 @@ const skills = [
   "Node.js",
   "MongoDB",
   "GitHub",
+  "MySql",
 ];
 
 const Skills = () => {
