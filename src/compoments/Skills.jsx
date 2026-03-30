@@ -9,9 +9,9 @@ const skills = [
   "Redux-Toolkit",
   "Node.js",
   "MongoDB",
-  "GitHub",
   "MySql",
   "Excel",
+  "GitHub",
 ];
 
 const Skills = () => {
